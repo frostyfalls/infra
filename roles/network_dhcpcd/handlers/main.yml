@@ -3,5 +3,4 @@
   community.general.runit:
     name: dhcpcd
     state: restarted
-  listen:
-    - dhcpcd
+  listen: dhcpcd

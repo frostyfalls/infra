@@ -3,5 +3,4 @@
   community.general.runit:
     name: chronyd
     state: restarted
-  listen:
-    - chrony
+  listen: chrony

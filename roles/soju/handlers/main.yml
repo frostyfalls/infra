@@ -3,5 +3,4 @@
   community.general.runit:
     name: soju
     state: restarted
-  listen:
-    - soju
+  listen: soju
