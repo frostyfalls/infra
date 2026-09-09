@@ -16,3 +16,11 @@ infrastructure I use.
 # Primary playbook
 ansible-playbook -DK main.yml
 ```
+
+## Future Additions
+
+* [ ] PostgreSQL role
+* [ ] Static network configuration role
+* [ ] ACME automation role
+* [ ] System maintenance playbook
+* [ ] nginx role
