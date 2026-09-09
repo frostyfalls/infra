@@ -1,0 +1,7 @@
+---
+- name: Restart service
+  community.general.runit:
+    name: cronie
+    state: restarted
+  listen:
+    - crond

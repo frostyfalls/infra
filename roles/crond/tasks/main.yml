@@ -1,0 +1,10 @@
+---
+- name: Install packages
+  community.general.xbps:
+    name: cronie
+    state: present
+- name: Enable service
+  community.general.runit:
+    name: cronie
+    state: started
+    enabled: true

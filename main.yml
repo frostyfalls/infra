@@ -8,3 +8,4 @@
     - name: network_dns
     - name: network_dhcpcd
     - name: chrony
+    - name: crond
