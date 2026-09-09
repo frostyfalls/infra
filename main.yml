@@ -1,0 +1,6 @@
+---
+- name: Base machine configuration
+  hosts:
+    - servers
+  become: true
+  become_user: root
