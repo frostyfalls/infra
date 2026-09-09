@@ -1,0 +1,6 @@
+{% for nameserver in network_dns_nameservers | default([]) %}
+nameserver {{ nameserver }}
+{% endfor %}
+{% for search in network_dns_search | default([]) %}
+search {{ search }}
+{% endfor %}

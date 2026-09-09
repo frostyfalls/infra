@@ -1,0 +1,5 @@
+127.0.0.1 localhost {{ network_fqdn | default(ansible_facts['fqdn']) }} {{ network_hostname | default(ansible_facts['hostname']) }}
+::1 localhost {{ network_fqdn | default(ansible_facts['fqdn']) }} {{ network_hostname | default(ansible_facts['hostname']) }}
+{% for host in network_dns_hosts | default([]) %}
+{{ host.addr }} {{ host.name }}
+{% endfor %}
