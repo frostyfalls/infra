@@ -2,8 +2,13 @@ network_fqhn: attic.home.arpa
 network_dns_nameservers:
   - 127.0.0.1
   - ::1
+dnscrypt_proxy_enabled: true
+miniflux_enabled: true
+miniflux_base_url: https://rss.i.rvl.onl
+miniflux_database_url: user=_miniflux dbname=miniflux host=/tmp sslmode=disable
+miniflux_listen_addr: localhost:8080
+miniflux_https: true
 soju_enabled: true
 soju_hostname: irc.i.rvl.onl
 soju_db_driver: postgres
 soju_db_source: user=_soju dbname=soju host=/tmp sslmode=disable
-dnscrypt_proxy_enabled: true

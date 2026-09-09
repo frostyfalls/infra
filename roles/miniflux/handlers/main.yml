@@ -1,0 +1,6 @@
+---
+- name: Restart service
+  community.general.runit:
+    name: miniflux
+    state: restarted
+  listen: miniflux

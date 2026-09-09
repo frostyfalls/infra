@@ -12,5 +12,7 @@
       when: dnscrypt_proxy_enabled | default(false)
     - name: chrony
     - name: crond
+    - name: miniflux
+      when: miniflux_enabled | default(false)
     - name: soju
       when: soju_enabled | default(false)

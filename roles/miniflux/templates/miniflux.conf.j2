@@ -1,0 +1,4 @@
+BASE_URL={{ miniflux_base_url | default('http://localhost') }}
+DATABASE_URL={{ miniflux_database_url | default('user=miniflux dbname=miniflux host=/tmp sslmode=disable') }}
+LISTEN_ADDR={{ miniflux_listen_addr | default('localhost:8080') }}
+HTTPS={{ miniflux_https | default(false) | ternary('1', '0') }}
