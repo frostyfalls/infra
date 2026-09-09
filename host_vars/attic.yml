@@ -1,9 +1,7 @@
 network_fqhn: attic.home.arpa
-network_dns_hosts: []
 network_dns_nameservers:
   - 127.0.0.1
   - ::1
-network_dns_search: []
 soju_enabled: true
 soju_hostname: irc.i.rvl.onl
 soju_db_driver: postgres
