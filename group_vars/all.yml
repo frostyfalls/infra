@@ -17,5 +17,7 @@ dnscrypt_proxy_sources:
     cache_file: quad9-resolvers.md
     prefix: quad9-
 dnscrypt_proxy_cloaking_rules:
-  - name: '*.i.rvl.onl'
+  - name: irc.i.rvl.onl
+    result: 10.0.0.20
+  - name: rss.i.rvl.onl
     result: 10.0.0.20

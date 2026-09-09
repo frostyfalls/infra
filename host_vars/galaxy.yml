@@ -1,0 +1,7 @@
+network_fqhn: galaxy.home.arpa
+network_dns_nameservers:
+  - 127.0.0.1
+  - ::1
+dnscrypt_proxy_enabled: true
+dnscrypt_proxy_listen_addresses:
+  - '[::]:53'
