@@ -10,8 +10,7 @@
     owner: root
     group: root
     mode: '0644'
-  notify:
-    - chrony
+  notify: chrony
 - name: Enable service
   community.general.runit:
     name: chronyd
