@@ -7,6 +7,7 @@
   roles:
     - name: network_dns
     - name: network_dhcpcd
+    - name: xbps
     - name: chrony
     - name: crond
     - name: soju

@@ -1,0 +1,4 @@
+---
+xbps_repositories:
+  - https://mirrors.summithq.com/voidlinux/current
+  - https://mirrors.summithq.com/voidlinux/current/nonfree

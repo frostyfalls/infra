@@ -1,0 +1,9 @@
+---
+- name: Configure repositories
+  ansible.builtin.template:
+    src: 10-repositories.conf.j2
+    dest: /etc/xbps.d/10-repositories.conf
+    owner: root
+    group: root
+    mode: '0644'
+  when: xbps_repositories is defined
