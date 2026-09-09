@@ -1,0 +1,6 @@
+localhost 127.0.0.1
+localhost ::1
+
+{% for rule in dnscrypt_proxy_cloaking_rules %}
+{{ rule.name }} {{ rule.result }}
+{% endfor %}

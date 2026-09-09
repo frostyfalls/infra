@@ -1,15 +1,11 @@
 network_fqhn: attic.home.arpa
-network_dns_hosts:
-  - name: galaxy.home.arpa
-    addr: 10.0.0.10
-  - name: attic.home.arpa
-    addr: 10.0.0.20
+network_dns_hosts: []
 network_dns_nameservers:
-  - 9.9.9.11
-  - 2620:fe::11
-network_dns_search:
-  - home.arpa
+  - 127.0.0.1
+  - ::1
+network_dns_search: []
 soju_enabled: true
 soju_hostname: irc.i.rvl.onl
 soju_db_driver: postgres
 soju_db_source: user=_soju dbname=soju host=/tmp sslmode=disable
+dnscrypt_proxy_enabled: true

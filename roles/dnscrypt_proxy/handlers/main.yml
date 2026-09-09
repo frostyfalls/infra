@@ -1,0 +1,6 @@
+---
+- name: Restart service
+  community.general.runit:
+    name: dnscrypt-proxy
+    state: restarted
+  listen: dnscrypt_proxy

@@ -1,0 +1,27 @@
+---
+- name: Install packages
+  community.general.xbps:
+    name: dnscrypt-proxy
+    state: present
+- name: Deploy configuration
+  ansible.builtin.template:
+    src: '{{ item }}.j2'
+    dest: /etc/dnscrypt-proxy/{{ item }}
+    owner: root
+    group: root
+    mode: '0644'
+  with_items:
+    - dnscrypt-proxy.toml
+    - cloaking-rules.txt
+  notify: dnscrypt_proxy
+- name: Ensure directory permissions
+  ansible.builtin.file:
+    path: /etc/dnscrypt-proxy
+    owner: root
+    group: dnscrypt_proxy
+    mode: '0775'
+- name: Enable service
+  community.general.runit:
+    name: dnscrypt-proxy
+    state: started
+    enabled: true
