@@ -1,0 +1,15 @@
+{% for listen in soju_listen %}
+listen {{ listen }}
+{% endfor %}
+{% if soju_hostname | default %}
+hostname {{ soju_hostname }}
+{% endif %}
+{% if soju_title | default %}
+title {{ soju_title | quote }}
+{% endif %}
+{% if soju_tls_cert and soju_tls_key %}
+tls {{ soju_tls_cert | quote }} {{ soju_tls_key | quote }}
+{% endif %}
+{% if soju_db_driver and soju_db_source %}
+db {{ soju_db_driver }} {{ soju_db_source | quote }}
+{% endif %}

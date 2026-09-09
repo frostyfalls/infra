@@ -1,0 +1,8 @@
+---
+soju_listen:
+  - ircs://
+  - unix+admin://
+soju_tls_cert: /etc/soju/cert.pem
+soju_tls_key: /etc/soju/key.pem
+soju_db_driver: sqlite3
+soju_db_source: /var/lib/soju/main.db

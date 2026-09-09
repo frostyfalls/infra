@@ -9,3 +9,5 @@
     - name: network_dhcpcd
     - name: chrony
     - name: crond
+    - name: soju
+      when: soju_enabled | default(false)

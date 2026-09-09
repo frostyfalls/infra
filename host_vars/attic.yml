@@ -9,3 +9,7 @@ network_dns_nameservers:
   - 2620:fe::11
 network_dns_search:
   - home.arpa
+soju_enabled: true
+soju_hostname: irc.i.rvl.onl
+soju_db_driver: postgres
+soju_db_source: user=_soju dbname=soju host=/tmp sslmode=disable

@@ -1,0 +1,17 @@
+---
+- name: Install packages
+  community.general.xbps:
+    name: soju
+    state: present
+- name: Deploy configuration
+  ansible.builtin.template:
+    src: config.j2
+    dest: /etc/soju/config
+    owner: root
+    group: _soju
+    mode: '0640'
+  notify: soju
+- name: Enable service
+  community.general.runit:
+    name: soju
+    enabled: true
