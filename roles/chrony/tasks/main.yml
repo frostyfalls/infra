@@ -1,0 +1,19 @@
+---
+- name: Install packages
+  community.general.xbps:
+    name: chrony
+    state: present
+- name: Deploy configuration
+  ansible.builtin.copy:
+    src: chrony.conf
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - chrony
+- name: Enable service
+  community.general.runit:
+    name: chronyd
+    state: started
+    enabled: true

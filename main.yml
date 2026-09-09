@@ -4,3 +4,7 @@
     - servers
   become: true
   become_user: root
+  roles:
+    - name: network_dns
+    - name: network_dhcpcd
+    - name: chrony

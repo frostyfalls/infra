@@ -1,0 +1,7 @@
+---
+- name: Restart service
+  community.general.runit:
+    name: chronyd
+    state: restarted
+  listen:
+    - chrony
